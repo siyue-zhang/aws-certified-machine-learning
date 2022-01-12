@@ -49,6 +49,41 @@ train = imputer.transform(train).ravel()
 
 ### 2. Feature Extraction and Selection
 
+1. High feature to observation ratio casues overfitting.
+2. Lower dimensions are easier to visualize than higher dimensions.
+
+* Feature selection
+1. Normalization (rescales the values into a range of [0,1])
+2. Remove features based on **variance thresholds**
+
+```
+from sklearn import preprocessing
+from sklearn.feature_selection import VarianceThreshold
+
+normalized_data = preprocessing.normalize(data)
+selector = VarianceThreshold()
+selected_feature = selector.fit_transform(normalized_data)
+```
+
+* Feature extration
+1. Standardization (rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance))
+2. PCA creates new features by linearly combining original features
+  * New features are uncorrelated, i.e. orthogonal
+  * New features are ranked in order of "explained variance"
+  * PCA can speed up machine learning while having good accuracy
+
+```
+from sklearn.preprocessing import StandardScaler
+x = StandardScaler().fit_transform(x)
+
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+
+variance_ratio = pca.explained_variance_ratio_
+total_variance = variance_ratio[0] + variance_ratio[1]
+```
+
+
 ### 3. Encoding Categorical Values
 
 ### 4. Numerical Engineering
