@@ -3,6 +3,8 @@ Notes for [AWS Certified Machine Learning – Specialty](https://aws.amazon.com/
 
 <img src=https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Machine-Learning_Specialty_512x512.6ac490d15fe033a3d67ca544ecd0bcbcb10d391a.png width=150>
 
+This credential helps organizations identify and develop talent with critical skills for implementing cloud initiatives. Earning AWS Certified Machine Learning – Specialty validates expertise in building, training, tuning, and deploying machine learning (ML) models on AWS.
+
 **Contents**
 
 * [Data Engineering](#data-engineering)
