@@ -18,8 +18,20 @@ This credential helps organizations identify and develop talent with critical sk
 ### 1. Handling Missing Data
 
 * Do nothing
+
+Let algorithm either replace missing values through imputation (XGBoost) or just ignore them (LightGBM) with ``use_missing = False`` 
+
 * Remove the entire record
 * Mode/median/average value replacement
+
+```
+from sklearn.impute import SimpleImputer
+
+imputer = SimpleImputer(missing_values=np.nan, strategy="median")
+imputer = imputer.fit(train)
+train = imputer.transform(train).ravel()
+```
+
 * Most frequent value
 * Model-based imputation
   * K-Nearest Neighbors
