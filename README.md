@@ -110,6 +110,20 @@ label_style.fit_transofrm(data)
 
 #### Label encoding
 
+Ordinal encoder 
+
+```python
+from sklearn.preprocessing import LabelEncoder
+# create workclass_code
+LabelEncoder().fit_transform()
+```
+
+#### One-hot-encoding
+
+```python
+pd.get_dummies(cat_features, columns=["workclass"])
+```
+
 ### 4. Numerical Engineering
 
 
