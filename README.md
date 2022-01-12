@@ -55,8 +55,8 @@ Randomly choosing the missing value from a set of related and similar variables
 
 ### 2. Feature Extraction and Selection
 
-1. High feature to observation ratio casues overfitting.
-2. Lower dimensions are easier to visualize than higher dimensions.
+* High feature to observation ratio casues overfitting.
+* Lower dimensions are easier to visualize than higher dimensions.
 
 #### Feature selection
 1. Normalization (rescales the values into a range of [0,1])
