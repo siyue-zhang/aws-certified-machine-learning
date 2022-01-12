@@ -24,7 +24,7 @@ Let algorithm either replace missing values through imputation (XGBoost) or just
 * Remove the entire record
 * Mode/median/average value replacement
 
-```
+```python
 from sklearn.impute import SimpleImputer
 
 imputer = SimpleImputer(missing_values=np.nan, strategy="median")
@@ -56,7 +56,7 @@ train = imputer.transform(train).ravel()
 1. Normalization (rescales the values into a range of [0,1])
 2. Remove features based on **variance thresholds**
 
-```
+```python
 from sklearn import preprocessing
 from sklearn.feature_selection import VarianceThreshold
 
@@ -72,7 +72,7 @@ selected_feature = selector.fit_transform(normalized_data)
   * New features are ranked in order of "explained variance"
   * PCA can speed up machine learning while having good accuracy
 
-```
+```python
 from sklearn.preprocessing import StandardScaler
 x = StandardScaler().fit_transform(x)
 
