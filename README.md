@@ -5,7 +5,7 @@ Notes for [AWS Certified Machine Learning – Specialty](https://aws.amazon.com/
 
 This credential helps organizations identify and develop talent with critical skills for implementing cloud initiatives. Earning AWS Certified Machine Learning – Specialty validates expertise in building, training, tuning, and deploying machine learning (ML) models on AWS.
 
-**Contents**
+## Contents##
 
 * [Data Engineering](#data-engineering)
 * [Exploratory Data Analysis](#exploratory-data-analysis)
@@ -83,6 +83,7 @@ variance_ratio = pca.explained_variance_ratio_
 total_variance = variance_ratio[0] + variance_ratio[1]
 ```
 
+[back](#contents)
 
 ### 3. Encoding Categorical Values
 
