@@ -126,6 +126,20 @@ pd.get_dummies(cat_features, columns=["workclass"])
 
 ### 4. Numerical Engineering
 
+* Change numeric values on the same scale
+  * Normalization
+  * Standardization
+* Binning (quantization)
+  * Categorical binning (e.g. Asia - China, Singapore, Japan...)
+  * Numerical binning
+  * Quantile binning
+```python
+# bins are of different sizes, data is evenly distributed
+pd.qcut(df["price"], q=4, labels=["sophomore","junior","senoir","professional"])
+
+# bins are of equal size, data is unevenly distributed
+pd.cut(df["price"], bins=4)
+```
 
 
 ### 5. Text Feature Editing
