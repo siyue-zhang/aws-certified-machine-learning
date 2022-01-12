@@ -15,6 +15,30 @@ This credential helps organizations identify and develop talent with critical sk
 
 ## Data Engineering
 
+### 1. Handling Missing Data
+
+* Do nothing
+* Remove the entire record
+* Mode/median/average value replacement
+* Most frequent value
+* Model-based imputation
+  * K-Nearest Neighbors
+  * Regression
+  * Deep Learning
+* Interpolation / extrapolation
+* Forward filling / backward filling
+* Hot deck imputation
+
+### 2. Feature Extraction and Selection
+
+### 3. Encoding Categorical Values
+
+### 4. Numerical Engineering
+
+### 5. Text Feature Editing
+
+### 6. AWS Migration Services and Tools
+
 ## Exploratory Data Analysis
 
 ## Modeling
