@@ -141,10 +141,15 @@ pd.qcut(df["price"], q=4, labels=["sophomore","junior","senoir","professional"])
 pd.cut(df["price"], bins=4)
 ```
 
-
 ### 5. Text Feature Editing
 
+#### Bag-of-Words
 
+Tokenize raw text and creates s statistical representataion of the text
+
+#### N-Gram
+
+Extension of Bag-of-Words which produces groups of words of n size
 
 ### 6. AWS Migration Services and Tools
 
