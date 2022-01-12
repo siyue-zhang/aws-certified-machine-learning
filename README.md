@@ -17,12 +17,12 @@ This credential helps organizations identify and develop talent with critical sk
 
 ### 1. Handling Missing Data
 
-* Do nothing
+#### Do nothing
 
 Let algorithm either replace missing values through imputation (XGBoost) or just ignore them (LightGBM) with ``use_missing = False`` 
 
-* Remove the entire record
-* Mode/median/average value replacement
+#### Remove the entire record
+#### Mode/median/average value replacement
 
 ```python
 from sklearn.impute import SimpleImputer
@@ -32,20 +32,26 @@ imputer = imputer.fit(train)
 train = imputer.transform(train).ravel()
 ```
 
-* Most frequent value
+#### Most frequent value
 
   * Doesn't factor correlation between features
   * Works with categorical features
   * Can introduce bias
   * ``stragtegy="most_frequent"``
 
-* Model-based imputation
-  * K-Nearest Neighbors (feature similarity to predict missing values)
-  * Regression
-  * Deep Learning
-* Interpolation / extrapolation
-* Forward filling / backward filling
-* Hot deck imputation (randomly choosing the missing value from a set of related and similar variables)
+#### Model-based imputation
+
+* K-Nearest Neighbors (feature similarity to predict missing values)
+* Regression
+* Deep Learning
+
+#### Interpolation / extrapolation
+
+#### Forward filling / backward filling
+
+#### Hot deck imputation 
+
+Randomly choosing the missing value from a set of related and similar variables
 
 ### 2. Feature Extraction and Selection
 
@@ -85,7 +91,24 @@ total_variance = variance_ratio[0] + variance_ratio[1]
 
 ### 3. Encoding Categorical Values
 
+#### Binarizer encoding
 
+```python
+# select categorical features
+cat_features = features_df.select_dtypes(include=["object"]).copy()
+
+# which features have NaN value?
+cat_features.columns[cat_features.isna().any()].tolist()
+
+# replace by most frequent class
+imputer = SimpleImputer(missing_values=np.nan, strategy="most_frequent")
+
+from sklearn.preprocessing import LabelBinarizer
+label_style = LabelBinarizer()
+label_style.fit_transofrm(data)
+```
+
+#### Label encoding
 
 ### 4. Numerical Engineering
 
