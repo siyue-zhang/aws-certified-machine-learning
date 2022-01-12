@@ -33,6 +33,12 @@ train = imputer.transform(train).ravel()
 ```
 
 * Most frequent value
+
+ * Doesn't factor correlation between features
+ * Works with categorical features
+ * Can introduce bias
+ * ``stragtegy="most_frequent"``
+
 * Model-based imputation
   * K-Nearest Neighbors
   * Regression
