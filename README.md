@@ -5,9 +5,22 @@ Notes for [AWS Certified Machine Learning – Specialty](https://aws.amazon.com/
 
 **Contents**
 
-[Data Engineering](#data-engineering)
+* [Data Engineering](#data-engineering)
+* [Exploratory Data Analysis](#exploratory-data-analysis)
+* [Modeling](#modeling)
+* [Algorithms](#algorithms)
+* [Implementation and Operations](#implementation-and-operations)
 
 ## Data Engineering
+
+## Exploratory Data Analysis
+
+## Modeling
+
+## Algorithms
+
+## Implementation and Operations
+
 
 
 
