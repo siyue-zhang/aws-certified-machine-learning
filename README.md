@@ -52,7 +52,7 @@ train = imputer.transform(train).ravel()
 1. High feature to observation ratio casues overfitting.
 2. Lower dimensions are easier to visualize than higher dimensions.
 
-* Feature selection
+#### Feature selection
 1. Normalization (rescales the values into a range of [0,1])
 2. Remove features based on **variance thresholds**
 
@@ -65,7 +65,7 @@ selector = VarianceThreshold()
 selected_feature = selector.fit_transform(normalized_data)
 ```
 
-* Feature extration
+#### Feature extration
 1. Standardization (rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance))
 2. PCA creates new features by linearly combining original features
   * New features are uncorrelated, i.e. orthogonal
@@ -83,25 +83,38 @@ variance_ratio = pca.explained_variance_ratio_
 total_variance = variance_ratio[0] + variance_ratio[1]
 ```
 
-:point_up_2: [back](#contents)
-
-
 ### 3. Encoding Categorical Values
+
+
 
 ### 4. Numerical Engineering
 
+
+
 ### 5. Text Feature Editing
+
+
 
 ### 6. AWS Migration Services and Tools
 
+
+:point_up_2: [back](#contents)
+
 ## Exploratory Data Analysis
+
+:point_up_2: [back](#contents)
 
 ## Modeling
 
+:point_up_2: [back](#contents)
+
 ## Algorithms
+
+:point_up_2: [back](#contents)
 
 ## Implementation and Operations
 
+:point_up_2: [back](#contents)
 
 
 
