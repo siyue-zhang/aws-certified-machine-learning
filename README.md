@@ -151,6 +151,12 @@ Tokenize raw text and creates s statistical representataion of the text
 
 Extension of Bag-of-Words which produces groups of words of n size
 
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+vectorizer = CountVectorizer(analyzer='word', ngram_range=(1,3))
+counts = vectorizer.fit_transform(corpus)
+```
+
 * Orthogonal Space Bigram
 
 * TF-IDF (term frequency–inverse document frequency)
