@@ -254,6 +254,11 @@ Move data:
 
 ### 1. Kinesis Data Streams
 
+* Get data from data producers such as IoT, social media
+* Use *shards* to stream data to consumers such as EC2, lambda, Kinesis Data Analytics, EMR clusters
+* Consumers then send data to a data repository such as S3, DynamoDB, Redshift or BI tools
+
+<image src=./data_stream.JPG width=700/>
 
 ### 2. Kinesis Data Firehose
 
