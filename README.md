@@ -296,6 +296,14 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 <image src=./firehose.JPG width=700/>
 <p/>
 
+
+
+There are some **key differences** between Kinesis Stream (KS) and Firehose (FH):
+
+- KS is real time, while FH is near-real time.
+- KS requires manual scaling and setup of its provisioning (shards), while FH is basically serverless.
+- KS records are immutable (they persist in stream for its retention period - default 24h), while records in FH are gone from FH the moment they are delivered to destination.
+
 ### 3. Kinesis Video Streams
 
 * Producers such as web cams, security cameras, audio feeds, images
