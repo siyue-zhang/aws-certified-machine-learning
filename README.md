@@ -262,6 +262,10 @@ Move data:
 
 ### 2. Kinesis Data Firehose
 
+* Get data from data producers such as IoT, social media
+* Use *Lambda* functioning instead of shards to transmit producer data
+
+<image src=./firehose.JPG width=700/>
 
 ### 3. Kinesis Video Streams
 
