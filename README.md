@@ -15,6 +15,12 @@ This credential helps organizations identify and develop talent with critical sk
   * Text Feature Editing
   * AWS Migration Services and Tools
 * [Exploratory Data Analysis](#exploratory-data-analysis)
+  * Kinesis Data Streams
+  * Kinesis Data Firehose
+  * Kinesis Video Streams
+  * Kinesis Data Analytics
+  * AWS Glue
+  * Analyze and visualize data
 * [Modeling](#modeling)
 * [Algorithms](#algorithms)
 * [Implementation and Operations](#implementation-and-operations)
@@ -246,6 +252,23 @@ Move data:
 
 ## Exploratory Data Analysis
 
+### 1. Kinesis Data Streams
+
+
+### 2. Kinesis Data Firehose
+
+
+### 3. Kinesis Video Streams
+
+
+### 4. Kinesis Data Analytics
+
+
+### 5. AWS Glue
+
+
+### 6. Analyze and visualize data
+ 
 :point_up_2: [back](#contents)
 
 ## Modeling
