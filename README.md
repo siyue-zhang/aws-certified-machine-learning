@@ -296,13 +296,17 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 <image src=./firehose.JPG width=700/>
 <p/>
 
+* Fully managed service that automatically scales to match data throughput
+* Capture, transform and load streaming data into S3, Redshift, Elasticsearch, and Splunk
+* Automatically convert to Apache Parquet/ORC before delivering to S3
+* Near real-time analytics
+* Requires no ongoing administration
+* Putting data into delivery stream 
 
+<p align="center">
+<image src=https://jayendrapatil.com/wp-content/uploads/2019/08/Kinesis-Data-Streams-vs.-Firehose-1024x779.png width=700/>
+<p/>
 
-There are some **key differences** between Kinesis Stream (KS) and Firehose (FH):
-
-- KS is real time, while FH is near-real time.
-- KS requires manual scaling and setup of its provisioning (shards), while FH is basically serverless.
-- KS records are immutable (they persist in stream for its retention period - default 24h), while records in FH are gone from FH the moment they are delivered to destination.
 
 ### 3. Kinesis Video Streams
 
