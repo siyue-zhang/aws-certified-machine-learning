@@ -260,6 +260,21 @@ Move data:
 
 <image src=./data_stream.JPG width=700/>
 
+> A **shard** is the base throughput unit of a Kinesis Data Stream. Data producers assign partition keys to records. Partition keys ultimately determine which shard ingests the data record for a stream.
+
+> **Data Stream** is a logical grouping of shards, will retain data for 24 hours, or up to 7 days with extended retention enabled.
+
+* Kinesis Producer Library
+
+Put data into a Kinesis data stream
+
+* Kinesis Agent
+
+Pre-built Java application that collects and sends data to Kinesis stream. It can be installed on web servers, log servers and database servers.
+
+<image src=./karc.JPG width=700/>
+
+
 ### 2. Kinesis Data Firehose
 
 * Get data from data producers such as IoT, social media
@@ -269,15 +284,23 @@ Move data:
 
 ### 3. Kinesis Video Streams
 
+* Producers such as web cams, security cameras, audio feeds, images
+* Consumers - Kinesis Video Stream applications, EC2 batch consumers
+* Stores to S3
 
 ### 4. Kinesis Data Analytics
 
+* Use SQL to process streaming data
+* Sources: Kinesis Data Streams and Kinesis Data Firehose
+* SQL queries output to S3, Redshift, BI tools
 
 ### 5. AWS Glue
 
 
 ### 6. Analyze and visualize data
- 
+
+
+
 :point_up_2: [back](#contents)
 
 ## Modeling
