@@ -304,7 +304,7 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 * Putting data into delivery stream 
 
 <p align="center">
-<image src=./dsvsf.png width=700/>
+<image src=./dsvsf.png width=500/>
 <p/>
 
 
