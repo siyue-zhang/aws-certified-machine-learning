@@ -278,6 +278,14 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 <image src=./karc.JPG width=500/>
 <p/>
 
+* **Key points**
+  * Shards are append-only logs
+  * Shards contain ordered sequence of records ordered by arrival time
+  * One shard can ingest up to 1000 data records per second, or 1MB/sec
+  * Specify the number of shards needed when you create a stream
+  * Add/remove shards from stream dynamically as throughput changes via API, Lambda, auto scaling
+  * Enhanced fan-out: one shard for each consumer
+  * Non-enhanced fan-out: one shard shared across consumers
 
 ### 2. Kinesis Data Firehose
 
