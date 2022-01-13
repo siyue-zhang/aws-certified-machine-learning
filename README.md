@@ -85,6 +85,9 @@ selected_feature = selector.fit_transform(normalized_data)
   * PCA can speed up machine learning while having good accuracy
 
 ```python
+from sklearn.model_selection import train_test_split
+train_X, test_X, train_y, test_y = train_test_split()
+
 from sklearn.preprocessing import StandardScaler
 x = StandardScaler().fit_transform(x)
 
