@@ -153,9 +153,7 @@ Extension of Bag-of-Words which produces groups of words of n size
 
 * Orthogonal Space Bigram
 
-* TF-IDF
-
-Term frequency * Inverse document frequency
+* TF-IDF (term frequency–inverse document frequency)
 
 <image src=https://miro.medium.com/max/1200/1*V9ac4hLVyms79jl65Ym_Bw.jpeg width=400>
 
