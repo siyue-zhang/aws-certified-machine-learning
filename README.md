@@ -258,7 +258,9 @@ Move data:
 * Use *shards* to stream data to consumers such as EC2, lambda, Kinesis Data Analytics, EMR clusters
 * Consumers then send data to a data repository such as S3, DynamoDB, Redshift or BI tools
 
+<p align="center">
 <image src=./data_stream.JPG width=700/>
+<p/>
 
 > A **shard** is the base throughput unit of a Kinesis Data Stream. Data producers assign partition keys to records. Partition keys ultimately determine which shard ingests the data record for a stream.
 
@@ -272,7 +274,9 @@ Put data into a Kinesis data stream
 
 Pre-built Java application that collects and sends data to Kinesis stream. It can be installed on web servers, log servers and database servers.
 
-<image src=./karc.JPG width=700/>
+<p align="center">
+<image src=./karc.JPG width=500/>
+<p/>
 
 
 ### 2. Kinesis Data Firehose
@@ -280,7 +284,9 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 * Get data from data producers such as IoT, social media
 * Use *Lambda* functioning instead of shards to transmit producer data
 
+<p align="center">
 <image src=./firehose.JPG width=700/>
+<p/>
 
 ### 3. Kinesis Video Streams
 
