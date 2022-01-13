@@ -143,13 +143,21 @@ pd.cut(df["price"], bins=4)
 
 ### 5. Text Feature Editing
 
-#### Bag-of-Words
+* Bag-of-Words
 
 Tokenize raw text and creates s statistical representataion of the text
 
-#### N-Gram
+* N-Gram
 
 Extension of Bag-of-Words which produces groups of words of n size
+
+* Orthogonal Space Bigram
+
+* TF-IDF
+
+Term frequency * Inverse document frequency
+
+<image src=https://miro.medium.com/max/1200/1*V9ac4hLVyms79jl65Ym_Bw.jpeg width=400>
 
 ### 6. AWS Migration Services and Tools
 
