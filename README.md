@@ -301,12 +301,12 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 * Automatically convert to Apache Parquet/ORC before delivering to S3
 * Near real-time analytics
 * Requires no ongoing administration
-* Putting data into delivery stream 
+* Putting data into **data delivery stream**
+* Transform your data using Lambda 
 
 <p align="center">
 <image src=./dsvsf.png width=500/>
 <p/>
-
 
 ### 3. Kinesis Video Streams
 
@@ -316,6 +316,7 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 
 ### 4. Kinesis Data Analytics
 
+* Automatically provisions and scales infrastructure to read streaming media
 * Use SQL to process streaming data
 * Sources: Kinesis Data Streams and Kinesis Data Firehose
 * SQL queries output to S3, Redshift, BI tools
@@ -324,21 +325,23 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 
 **Transform and clean data**
 
-Data Catalog: persistent metadata store
+A fully managed ETL service for categorizing, cleaning, enriching, and moving data
 
-Classifier: determines the schema of your data
+* Data Catalog: persistent metadata store
 
-Connection: the properties required to connect to data store
+* Classifier: determines the schema of your data
 
-Crawler: connect to a data store and step through prioritized list of classifiers to determine schema
+* Connection: the properties required to connect to data store
 
-Database: set of associated data catalog table definitions
+* Crawler: connect to a data store and step through prioritized list of classifiers to determine schema
 
-Data store: repository for persistently storing data
+* Database: set of associated data catalog table definitions
 
-Data source: data store used as input to transformation
+* Data store: repository for persistently storing data
 
-Data targe: data store that a transformation writes to
+* Data source: data store used as input to transformation
+
+* Data target: data store that a transformation writes to
 
 **Format 1 data --> create a crawler to infer schema --> Glue generate code in python --> run python code as an ETL job --> Format 2 data**
 
@@ -351,6 +354,12 @@ Data targe: data store that a transformation writes to
   * Find imbalances in the data
   * Explore and demonstrate relationships
 
+BI tootls:
+1. Amazon Quicksight
+2. Tensorflow with TensorBoard
+3. Tableau
+
+Quicksight import data: csv link in S3 + manifest file
 
 :point_up_2: [back](#contents)
 
