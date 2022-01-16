@@ -322,9 +322,34 @@ Pre-built Java application that collects and sends data to Kinesis stream. It ca
 
 ### 5. AWS Glue
 
+**Transform and clean data**
+
+Data Catalog: persistent metadata store
+
+Classifier: determines the schema of your data
+
+Connection: the properties required to connect to data store
+
+Crawler: connect to a data store and step through prioritized list of classifiers to determine schema
+
+Database: set of associated data catalog table definitions
+
+Data store: repository for persistently storing data
+
+Data source: data store used as input to transformation
+
+Data targe: data store that a transformation writes to
+
+**Format 1 data --> create a crawler to infer schema --> Glue generate code in python --> run python code as an ETL job --> Format 2 data**
 
 ### 6. Analyze and visualize data
 
+* Visualize data before choosing a ML algorithm
+  * Identify patterns
+  * Find corrupt data
+  * Identify outliers
+  * Find imbalances in the data
+  * Explore and demonstrate relationships
 
 
 :point_up_2: [back](#contents)
