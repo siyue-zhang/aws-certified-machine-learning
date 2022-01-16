@@ -22,6 +22,7 @@ This credential helps organizations identify and develop talent with critical sk
   * AWS Glue
   * Analyze and visualize data
 * [Modeling](#modeling)
+  * 
 * [Algorithms](#algorithms)
 * [Implementation and Operations](#implementation-and-operations)
 
