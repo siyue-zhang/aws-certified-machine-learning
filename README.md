@@ -22,7 +22,10 @@ This credential helps organizations identify and develop talent with critical sk
   * AWS Glue
   * Analyze and visualize data
 * [Modeling](#modeling)
-  * 
+  * Modeling Concepts
+  * Train Models
+  * Evaluate and Deploy Models
+  * Automatic Model Tuning
 * [Algorithms](#algorithms)
 * [Implementation and Operations](#implementation-and-operations)
 
@@ -365,6 +368,15 @@ Quicksight import data: csv link in S3 + manifest file
 :point_up_2: [back](#contents)
 
 ## Modeling
+
+### 1. Modeling Concepts
+
+### 2. Train Models
+
+### 3. Evaluate and Deploy Models
+
+### 4. Automatic Model Tuning
+
 
 :point_up_2: [back](#contents)
 
