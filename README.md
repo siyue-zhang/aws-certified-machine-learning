@@ -371,7 +371,35 @@ Quicksight import data: csv link in S3 + manifest file
 
 ### 1. Modeling Concepts
 
+* Supervised learning
+* Unsupervised learning
+* Reinforcement learning
+
+Hyperparameter
+
+* Model hyperparameters: influence model performance
+* Algorithm hyperparameters: affect the speed and quality of learning process
+
 ### 2. Train Models
+
+Steps:
+1. Gather/engineer data into your dataset
+```python
+bucket_name = "your-s3-bucket-name"
+s3 = boto3.resource('s3')
+s3.create_bucket(Bucket=bucket_name)
+```
+2. Randomize the dataset
+```python
+train_data, test_data = np.split(model_data.sample(frac=1, random_state), [int(0.7 * len(model_data))])
+```
+3. Split the dataset into train and test datasets
+4. Choose best algorithm
+5. Load container for chosen model
+6. Manage compute capacity
+7. Create an instance of chosen model
+8. Define model's hyperparameter values
+9. Train the model
 
 ### 3. Evaluate and Deploy Models
 
