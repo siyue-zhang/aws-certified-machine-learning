@@ -401,16 +401,18 @@ containers = {:}
 my_region = boto3.session.Session().region_name
 ```
 5. Load container for chosen model
-```python
-sess = sagemaker.Session()
-xgb = sagemaker.estimator.Estimator()
-xgb.set_hyperparameters()
-```
 6. Manage compute capacity
 7. Create an instance of chosen model
 8. Define model's hyperparameter values
+```python
+sess = sagemaker.Session()
+xgb = sagemaker.estimator.Estimator(role, train_instance_type, output_path)
+xgb.set_hyperparameters()
+```
 9. Train the model
-
+```python
+xgb.fit({'train': s3_input_train})
+```
 ### 3. Evaluate and Deploy Models
 
 ### 4. Automatic Model Tuning
