@@ -415,6 +415,20 @@ xgb.fit({'train': s3_input_train})
 ```
 ### 3. Evaluate and Deploy Models
 
+```python
+xgb_predictor = xgb.deploy(initial_instance_count=1, instance_type='ml.m4.xlarge')
+```
+
+SageMaker Hosting Services
+1. Create model in SageMaker
+2. Create an endpoint configuration
+3. Create HTTPS endpoint
+
+<p align="center">
+<image src=https://docs.aws.amazon.com/sagemaker/latest/dg/images/sagemaker-architecture.png
+ width=700/>
+<p/>
+
 ### 4. Automatic Model Tuning
 
 
