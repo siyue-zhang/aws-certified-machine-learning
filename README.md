@@ -390,12 +390,22 @@ s3 = boto3.resource('s3')
 s3.create_bucket(Bucket=bucket_name)
 ```
 2. Randomize the dataset
+3. Split the dataset into train and test datasets
 ```python
 train_data, test_data = np.split(model_data.sample(frac=1, random_state), [int(0.7 * len(model_data))])
 ```
-3. Split the dataset into train and test datasets
 4. Choose best algorithm
+```python
+role = get_execution_role()
+containers = {:}
+my_region = boto3.session.Session().region_name
+```
 5. Load container for chosen model
+```python
+sess = sagemaker.Session()
+xgb = sagemaker.estimator.Estimator()
+xgb.set_hyperparameters()
+```
 6. Manage compute capacity
 7. Create an instance of chosen model
 8. Define model's hyperparameter values
