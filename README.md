@@ -27,6 +27,14 @@ This credential helps organizations identify and develop talent with critical sk
   * Evaluate and Deploy Models
   * Automatic Model Tuning
 * [Algorithms](#algorithms)
+  * Regression
+  * Clustering
+  * Classification
+  * Image Analysis
+  * Text Analysis
+  * Anomaly Detection
+  * Reinforcement
+  * Forecasting
 * [Implementation and Operations](#implementation-and-operations)
 
 ## Data Engineering
@@ -431,11 +439,57 @@ SageMaker Hosting Services
 
 ### 4. Automatic Model Tuning
 
+#### Hyperparameter Tuning Job
 
+* Random search
+* Bayesian search: treats hyperparameter tuning like a regression problem
+
+#### Define Metrics
+
+1. Built-in algorithms: choose one of the metrics as the objective metric
+2. Custom algorithms: emit at least one metric to stderr or stdout
+
+#### Define Hyperparameter Ranges
+
+* CategoricalParameterRanges
+* ContinuousParameterRanges
+* IntegerParameterRanges
+
+#### Hyperparameter Scaling
+
+* Auto: choose the best scale
+* Linear: search values in range using a linear scale
+* Logarithmic
+* ReverseLogarithmic
 
 :point_up_2: [back](#contents)
 
 ## Algorithms
+
+### 1. Regression
+
+* Linear Learner
+* 
+
+### 2. Clustering
+
+### 3. Classification
+
+### 4. Image Analysis
+
+### 5. Text Analysis
+
+#### Blazing Text
+
+### 6. Anomaly Detection
+
+#### Random Cut Forecast
+
+#### k-Nearest-Neighbors
+
+### 7. Reinforcement
+
+### 8. Forecasting
 
 :point_up_2: [back](#contents)
 
