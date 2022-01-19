@@ -550,8 +550,9 @@ Amazon SageMaker uses a modified version of the web-scale k-means clustering alg
 
 Objective is to minimize within-cluster sum of squares (WCSS)
 
-[](https://wikimedia.org/api/rest_v1/media/math/render/svg/debd28209802c22a6e6a1d74d099f728e6bd17a4)
-
+<p align="center">
+<image src=https://wikimedia.org/api/rest_v1/media/math/render/svg/debd28209802c22a6e6a1d74d099f728e6bd17a4 />
+<p/>
 
 ### 3. Classification
 
