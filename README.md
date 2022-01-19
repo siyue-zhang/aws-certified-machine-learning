@@ -544,6 +544,15 @@ linear.fit({'train': s3_training_data_location})
 
 ### 2. Clustering
 
+#### K-Means
+
+Amazon SageMaker uses a modified version of the web-scale k-means clustering algorithm.
+
+Objective is to minimize within-cluster sum of squares (WCSS)
+
+[](https://wikimedia.org/api/rest_v1/media/math/render/svg/debd28209802c22a6e6a1d74d099f728e6bd17a4)
+
+
 ### 3. Classification
 
 ### 4. Image Analysis
