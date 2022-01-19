@@ -468,7 +468,7 @@ SageMaker Hosting Services
 
 ### 1. Regression
 
-* Linear Learner
+* [Linear Learner](https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html)
 * XGBoost
   * Gradient boosted trees
   * Predict a target by combining the estimates from a set of simpler models
