@@ -469,7 +469,34 @@ SageMaker Hosting Services
 ### 1. Regression
 
 * Linear Learner
-* 
+* XGBoost
+  * Gradient boosted trees
+  * Predict a target by combining the estimates from a set of simpler models
+  * Can differentiate the importance of features through wights
+* K-Nearest Neighbors
+  * Find the k closest points to the sample point and gives a prediction of the average of their features
+  * Indexed based
+  * Use PCA to optimize dimensionality
+  * Not often used for regression, but can
+ * Factorization Machines
+  * Extension of linear model used on high dimensional sparse datasets
+  * Used for click prediction, and item recommendation 
+
+|Algorithms|Hyperparameter|Definition|
+|---|---|---|
+|Linear Learner | feature_dim | number of feature in the input |
+| | predictor_type | regressor for regression problems |
+| | loss | auto, squared_loss, absolute_loss, etc. |
+| XGBoost | num_round | number of rounds the training runs|
+| | objective | reg:logistic, reg:squarederror |
+|K-Nearest Neighbors | feature_dim || 
+|| k | number of nearest neighbors|
+||predictor_type| regressor for regression problems |
+||sample_size||
+||dimensionality_reduction_target| target dimension to reduce to|
+|Factorization Machines|feature_dim||
+||num_factors|dimensionality of factorization|
+||predictor_type||
 
 ### 2. Clustering
 
