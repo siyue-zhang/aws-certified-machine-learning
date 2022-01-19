@@ -498,6 +498,50 @@ SageMaker Hosting Services
 ||num_factors|dimensionality of factorization|
 ||predictor_type||
 
+```python
+from io import StringIO
+s3 = boto3.resource('s3')
+bucket = 'name'
+object_key = '.csv'
+
+csv_obj = s3.Object(bucket, object_key)
+csv_string = csv_obj.get()['Body'].read().decode('utf-8')
+
+dataset = pd.read_csv(StringIO(csv_string))
+dataset['dteday'] = dataset['dteday'].str.replace("-","")
+
+train_data, test_data = np.split(dataset.sample(frac=1, random_state), [int(0.7 * len(dataset))])
+
+feature_dataset = train_data[]
+features = np.array(feature_dataset.values).astype('float32')
+
+label_dataset = train_data[]
+labels = np.array(label_dataset.values).astype('float32')
+labels_vec = np.squeeze(np.asarray(labels))
+
+# Setup protoBuf
+buffer = io.BytesIO()
+smac.write_numpy_to_dense_tensor(buffer, features, labels_vec)
+buffer.seek(0)
+
+boto3.resource('s3').Bucket(bucket).Object(os.path.join()).upload_fileobj(buffer)
+
+# Model artifects
+output_location
+
+# Get the Linear Learner container instance
+from sagemaker.amazon.amazon_estimator import get_image_uri
+linear_container = get_image_uri(boto3.Session().region_name, 'linear-learner')
+
+# Train the model
+role = get_execution_role()
+sagemaker_session = sagemaker.Session()
+# Provide the container, role, instance type and model output location
+linear = sagemaker.estimator.Estimator(linear_container, role, train_instance_count, train_instance_type, output_path, sagemaker_session)
+linear.set_hyperparameters(future_dim, mini_batch_size, predictor_type)
+linear.fit({'train': s3_training_data_location})
+```
+
 ### 2. Clustering
 
 ### 3. Classification
