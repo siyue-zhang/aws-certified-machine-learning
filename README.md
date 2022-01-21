@@ -618,6 +618,16 @@ Binary-class or multiple-class
   * RNN and CNN 
   * SOTA encoder-decoder architecture
 
+**Fasttext**
+* Pre-trained word vectors learned on different sources
+* lid.176.bin: language identification model
+
+```python
+!wget -O model.bin https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin
+!tar -czvf langid.tar.gz model.bin
+blazing_text_model_location = my_session.upload_data("langid.tar.gz", bucket=bucket_name, key_prefix=prefix)
+!rm langid.tar.gz model.bin
+``
 
 ### 6. Reinforcement
 
