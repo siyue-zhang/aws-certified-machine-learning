@@ -32,7 +32,6 @@ This credential helps organizations identify and develop talent with critical sk
   * Classification
   * Image Analysis
   * Text Analysis
-  * Anomaly Detection
   * Reinforcement
   * Forecasting
 * [Implementation and Operations](#implementation-and-operations)
