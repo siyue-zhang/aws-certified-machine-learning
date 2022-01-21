@@ -563,7 +563,7 @@ Binary-class or multiple-class
 * XGBoost: gradient boosted trees algorithm
 * K-Nearest Neighbors
 * Factorization Machines: extension of linear model used on high dimensional sparse datasets (click prediction, item recommendation), scored using Binary Cross Entropy, Accuracy, F1 Score
-* Random Cut Forecast
+* [Random Cut Forecast](https://medium.com/analytics-vidhya/random-cut-forest-321aae4d8a59)
   * Unsupervised algorithm for detecting anomalous data points within a data set
   * Uses an anomaly score (high score -> anomaly in the data)
   * Common practice: scores beyond 3 SD from the mean score are considered anomalous
@@ -599,8 +599,25 @@ Binary-class or multiple-class
 
 ### 5. Text Analysis
 
-#### Blazing Text
-
+* Blazing Text
+  * Can use pre-trained vector representations that improve the generalizability of ther models
+* Latent Dirichlet Allocation (LDA)
+  * Unsupervised learning algorithm that organizes a set of text observations into distinct categories
+  * Frequently used to discover a number of topics shared across documents within a collection of texts
+  * Document: each observation, Feature: count of a word in the documents
+  * Topics are not specified in advance
+  * Each document is described as a mixture of topics
+* Neural Topic Model (NTM)
+  * Unsupervised learning algorithm that organizes a corpus of documents into topics containing word groupings, based on statistical distribution of the word groupings
+  * Similar to LDA, but will produce different outcomes
+* Object2Vec
+  * General purpose neural embedding algo that finds related clusters of words (words that are semantically similar)
+  * Used for information retrieval, product search, item matching, customer profiling
+  * Use case: recommendation engine based on collaborative filtering
+* Seq2seq
+  * Supervised learning, input of a sequence of tokens (audio, text, radar data) and output of another sequence of tokens
+  * RNN and CNN 
+  * SOTA encoder-decoder architecture
 
 
 ### 6. Reinforcement
