@@ -27,13 +27,13 @@ This credential helps organizations identify and develop talent with critical sk
   * Evaluate and Deploy Models
   * Automatic Model Tuning
 * [Algorithms](#algorithms)
-  * Regression
-  * Clustering
-  * Classification
-  * Image Analysis
-  * Text Analysis
-  * Reinforcement
-  * Forecasting
+  * Regression Algorithms
+  * Clustering Algorithms
+  * Classification Algorithms
+  * Image Analysis Algorithms
+  * Text Analysis Algorithms
+  * Reinforcement Learning Algorithms
+  * Forecasting Algorithms
 * [Implementation and Operations](#implementation-and-operations)
 
 ## Data Engineering
@@ -465,7 +465,7 @@ SageMaker Hosting Services
 
 ## Algorithms
 
-### 1. Regression
+### 1. Regression Algorithms
 
 * [Linear Learner](https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html)
 * XGBoost
@@ -541,7 +541,7 @@ linear.set_hyperparameters(future_dim, mini_batch_size, predictor_type)
 linear.fit({'train': s3_training_data_location})
 ```
 
-### 2. Clustering
+### 2. Clustering Algorithms
 
 #### K-Means
 
@@ -553,7 +553,7 @@ Objective is to minimize within-cluster sum of squares (WCSS)
 <image src=https://wikimedia.org/api/rest_v1/media/math/render/svg/debd28209802c22a6e6a1d74d099f728e6bd17a4 />
 <p/>
 
-### 3. Classification
+### 3. Classification Algorithms
 
 Binary-class or multiple-class
 
@@ -578,7 +578,7 @@ Binary-class or multiple-class
 || eval_metrics | score a labeled test data set (accuracy, precision_recall_fscore)
 || num_trees ||
 
-### 4. Image Analysis
+### 4. Image Analysis Algorithms
 
 * Image Classification
   * ResNet (scratch or transfer learning)
@@ -596,7 +596,7 @@ Binary-class or multiple-class
 || use_pretrained_model||
 
 
-### 5. Text Analysis
+### 5. Text Analysis Algorithms
 
 * Blazing Text
   * Can use pre-trained vector representations that improve the generalizability of ther models
@@ -627,11 +627,49 @@ Binary-class or multiple-class
 !tar -czvf langid.tar.gz model.bin
 blazing_text_model_location = my_session.upload_data("langid.tar.gz", bucket=bucket_name, key_prefix=prefix)
 !rm langid.tar.gz model.bin
-``
+```
 
-### 6. Reinforcement
+### 6. Reinforcement Learning Algorithms
 
-### 7. Forecasting
+* It learns a strategy, called a policy, that optimizes an objective for an agent acting in an environment.
+* Based on Markov Decision Processes models
+
+<p align=center>
+<image src=https://1.bp.blogspot.com/-DQb6CQXKyF4/YQRCqMP9mQI/AAAAAAAAkpc/bBOEN5sYh60gOoytFy39X1RXLpEICBeMQCNcBGAsYHQ/s908/rl_basics.png width=400/>
+<p/>
+
+Use cases:
+* Robotics
+* Traffic light control
+* Predictive auto scaling
+* Tuning parameters of a web system
+* Optimize chemical reactions
+* Personalized recommendations
+* Gaming
+
+RL in TensorFlow and Apache MXNet
+* RL toolkits: SageMaker supports Intel Coach and Ray RLlib
+* Environment: EnergyPlus, RoboSchool, Matlab simulink
+
+|Hyperparameter|Definition|
+|---|---|
+|learning_rate| how fast the model learns|
+|discount_factor| short-term or long-term rewards|
+|entropy| degree of uncertainty, exploit what's already known VS exploration|
+
+### 7. Forecasting Algorithms
+
+* DeepAR
+  * Supervised algo that forecasts 1-D time series using RNN
+  * Trains a single model jointly over all of the similar time series in your dataset
+  * Automatically derives time series based on the frequency of the target series
+
+|Hyperparameter|Definition|
+|---|---|
+|context_length|the number of time-points that model gets to see before making the prediction|
+|epochs|maximum number of passes over the training data|
+|prediction_length|forecast horizon|
+|time_freq|the granularity of the time series|
 
 :point_up_2: [back](#contents)
 
