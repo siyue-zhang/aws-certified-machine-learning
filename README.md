@@ -578,6 +578,19 @@ Binary-class or multiple-class
 || eval_metrics | score a labeled test data set (accuracy, precision_recall_fscore)
 || num_trees ||
 
+#### AWS Random Cut Forest VS Decision Trees
+
+* RCF randomly selects observations and features to grow trees, DT uses entirely the dataset.
+* More trees, more accuracy. Uncorrelated errors will average out.
+* When application requires greater accuracy and repeatability is not paramount.
+* Work fine without GPU.
+
+> Bagging: a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once.
+
+> Ensemble Learning: after several data samples are generated, these weak models are then trained independently, and depending on the type of task—regression or classification, for example—the average or majority of those predictions yield a more accurate estimate.
+
+> Boosting: one entity taking the value of another entity before it makes his calculations.
+
 ### 4. Image Analysis Algorithms
 
 * Image Classification
