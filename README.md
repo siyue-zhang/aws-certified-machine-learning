@@ -554,7 +554,6 @@ Objective is to minimize within-cluster sum of squares (WCSS)
 <image src=https://wikimedia.org/api/rest_v1/media/math/render/svg/debd28209802c22a6e6a1d74d099f728e6bd17a4 />
 <p/>
 
-
 ### 3. Classification
 
 Binary-class or multiple-class
@@ -575,21 +574,38 @@ Binary-class or multiple-class
 | Blazing Text | mode | Word2vec architecture used for training (batch_skipgram, skipgram, cbow)|
 | Image Classification | num_classes| |
 || num_training_samples | number of training examples in the input dataset|
+|| early_stopping | threshold at which stop training |
 | Random Cut Forest | feature_dim ||
 || eval_metrics | score a labeled test data set (accuracy, precision_recall_fscore)
 || num_trees ||
 
 ### 4. Image Analysis
 
+* Image Classification
+  * ResNet (scratch or transfer learning)
+  * Input format: RecordIO, .jpg, .png
+
+* Object Detection
+  * Object is categorized into one of classes, with a confidence score
+  * Location and scale of the object in the image are noted by bounding box
+  * Scratch or pre-trained on ImageNet dataset
+ 
+|Algorithms|Hyperparameter|Definition|
+|---|---|---|
+| Object Detection| num_classes||
+|| num_training_samples||
+|| use_pretrained_model||
+
+
 ### 5. Text Analysis
 
 #### Blazing Text
 
-### 6. Anomaly Detection
 
-### 7. Reinforcement
 
-### 8. Forecasting
+### 6. Reinforcement
+
+### 7. Forecasting
 
 :point_up_2: [back](#contents)
 
