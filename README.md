@@ -558,17 +558,26 @@ Objective is to minimize within-cluster sum of squares (WCSS)
 ### 3. Classification
 
 Binary-class or multiple-class
+
 * Linear Learner
 * Blazing Text: Word2vec and text classification algorithms (sentiment analysis, named entity recognition, machine translation, spam)
 * XGBoost: gradient boosted trees algorithm
 * K-Nearest Neighbors
-* Factorization Machines: extension 
-
+* Factorization Machines: extension of linear model used on high dimensional sparse datasets (click prediction, item recommendation), scored using Binary Cross Entropy, Accuracy, F1 Score
+* Random Cut Forecast
+  * Unsupervised algorithm for detecting anomalous data points within a data set
+  * Uses an anomaly score (high score -> anomaly in the data)
+  * Common practice: scores beyond 3 SD from the mean score are considered anomalous
+  * Use case: find exceptions in streaming trade data
 
 |Algorithms|Hyperparameter|Definition|
 |---|---|---|
-|Linear Learner | feature_dim | number of feature in the input |
-
+| Blazing Text | mode | Word2vec architecture used for training (batch_skipgram, skipgram, cbow)|
+| Image Classification | num_classes| |
+|| num_training_samples | number of training examples in the input dataset|
+| Random Cut Forest | feature_dim ||
+|| eval_metrics | score a labeled test data set (accuracy, precision_recall_fscore)
+|| num_trees ||
 
 ### 4. Image Analysis
 
@@ -577,10 +586,6 @@ Binary-class or multiple-class
 #### Blazing Text
 
 ### 6. Anomaly Detection
-
-* Random Cut Forecast
-
-* k-Nearest-Neighbors
 
 ### 7. Reinforcement
 
