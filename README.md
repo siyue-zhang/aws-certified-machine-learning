@@ -557,6 +557,19 @@ Objective is to minimize within-cluster sum of squares (WCSS)
 
 ### 3. Classification
 
+Binary-class or multiple-class
+* Linear Learner
+* Blazing Text: Word2vec and text classification algorithms (sentiment analysis, named entity recognition, machine translation, spam)
+* XGBoost: gradient boosted trees algorithm
+* K-Nearest Neighbors
+* Factorization Machines: extension 
+
+
+|Algorithms|Hyperparameter|Definition|
+|---|---|---|
+|Linear Learner | feature_dim | number of feature in the input |
+
+
 ### 4. Image Analysis
 
 ### 5. Text Analysis
@@ -565,9 +578,9 @@ Objective is to minimize within-cluster sum of squares (WCSS)
 
 ### 6. Anomaly Detection
 
-#### Random Cut Forecast
+* Random Cut Forecast
 
-#### k-Nearest-Neighbors
+* k-Nearest-Neighbors
 
 ### 7. Reinforcement
 
