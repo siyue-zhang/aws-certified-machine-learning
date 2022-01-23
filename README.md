@@ -694,6 +694,38 @@ RL in TensorFlow and Apache MXNet
 
 ## Implementation and Operations
 
+* SageMaker hosting automatically scales your endpoint instances to the performance needed through Application Auto Scaling
+* SageMaker automatically scaling endpoint instances scale out and spread instances across multiple availability zones
+* Artifacts are encrypted in transit and at rest, request to endpoint API can be made over a secure SSL connection
+* Assign IAM roles to model instance to provide permission to access resources
+* Clients send HTTPS requests to endpoint to obtain inferences
+* Can deploy multiple variants of a model to the same HTTPS endpoint
+
+### AWS Services
+
+* Lex: build chatbots, conversational interfaces using voice and text
+* Transcribe: speech recognition
+* Polly: text-to-speech
+* Rekognition: deep learning for image and video analysis, facial recognition
+* Translate: translate text
+* Comprehend: insights and relationships in text, understand positive or negative sentiment of the text
+
+### Secure SageMaker Instances
+
+* Seure your jupyter notebook instances
+  * Use EC2 instances dedicated for your use 
+  * Can map SageMaker resources to VPC so you can use your network controls
+  * Control access to jupyer notebooks and models through IAM
+  * Can only access from within your VPC using your VPC Endpoints (private connectivity)
+  * CloudWatch and CloudTrail for logging training job
+ 
+ ### Model Monitor
+ 
+ * Monitor production model to detect deviations in data quality compared to a baseline data
+   * Create baselining job
+   * Create a continuous monitoring schedule
+   * Start continuous monitoring
+
 :point_up_2: [back](#contents)
 
 
