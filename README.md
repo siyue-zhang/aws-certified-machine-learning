@@ -36,6 +36,8 @@ This credential helps organizations identify and develop talent with critical sk
   * Forecasting Algorithms
 * [Implementation and Operations](#implementation-and-operations)
 
+## Machine Learning Life Cycle
+
 <p align="center">
 <image src=./ML_cycle.png width=600/>
 <p/>
