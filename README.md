@@ -800,7 +800,7 @@ Lasso regularization (L1) handles outliers well, better than Ridge (L2). Lasso c
 Ridge (in regression problems), combats overfitting by forcing weights to be small, but not making them exactly 0. A major snag to consider when using L2 regularization is that it’s not robust to outliers. The squared terms will blow up the differences in the error of the outliers. The regularization would then attempt to fix this by penalizing the weights. 
 
 <p align=center>
-<image src=https://miro.medium.com/max/2000/1*zMLv7EHYtjfr94JOBzjqTA.png width=400/>
+<image src=https://miro.medium.com/max/2000/1*zMLv7EHYtjfr94JOBzjqTA.png width=500/>
 <p/>
 
 #### Key Differences
@@ -809,6 +809,28 @@ Ridge (in regression problems), combats overfitting by forcing weights to be sma
 * The L1 regularization solution is sparse. The L2 regularization solution is non-sparse.
 * L2 regularization doesn’t perform feature selection, since weights are only reduced to values near 0 instead of 0. L1 regularization has built-in feature selection.
 * L1 regularization is robust to outliers, L2 regularization is not. 
+
+### 7. Clustering Metrics
+
+#### rand_core
+
+The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that are assigned in the same or different clusters in the predicted and true clusterings. 1.0 stands for perfect match.
+
+The raw RI score is:
+
+RI = (number of agreeing pairs) / (number of pairs)
+
+#### adjusted_mutual_info_score
+
+Mutual Information is a function that measures the agreement of the two assignments, ignoring permutations. Perfect labeling is scored 1.0
+
+#### completeness_score
+
+Completeness metric of a cluster labeling given a ground truth.
+
+A clustering result satisfies completeness if all the data points that are members of a given class are elements of the same cluster.
+
+### 8. 
 
 :point_up_2: [back](#contents)
 
