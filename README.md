@@ -830,7 +830,24 @@ Completeness metric of a cluster labeling given a ground truth.
 
 A clustering result satisfies completeness if all the data points that are members of a given class are elements of the same cluster.
 
-### 8. 
+### 8. EMR Cluster
+
+Elastic MapReduce
+
+An AWS tool for big data processing and analysis. Amazon EMR is based on Apache Hadoop, a Java-based programming framework that supports the processing of large data sets in a distributed computing environment. Using MapReduce, a core component of the Hadoop software framework, developers can write programs that process massive amounts of unstructured data across a distributed cluster of processors or standalone computers. 
+
+The Elastic in EMR's name refers to its dynamic resizing ability, which enables administrators to increase or reduce resources, depending on their current needs.
+
+The use of spot instances in response to anticipated surges in usage is the most cost-effective approach for scaling up an EMR cluster. Kinesis streams is over-engineering because we do not have a real-time streaming requirement. Elasticsearch doesn't make sense because Elasticsearch is not a recommender engine.
+
+Reserved instance > more expensive > Spot instance
+
+### 9. Spark and SageMaker
+
+The SageMakerEstimator classes allow tight integration between Spark and SageMaker for several models including XGBoost, and offers the simplest solution. 
+
+XGBoost actually requires LibSVM or CSV input, not RecordIO.
+
 
 :point_up_2: [back](#contents)
 
