@@ -878,6 +878,13 @@ AWS managed service that you can use to run data engineering workloads in SageMa
 
 The two metrics used by the SageMaker Data Wrangler target leakage analysis visualization are **AOC-ROC and R2**.
 
+### 15. Label Encoding and Target Encoding
+
+### 16. Linear Discriminant Analysis (LDA)
+
+Used to reduce dimensionality in multi-class classification problems that predict a categorical target.
+
+
 :point_up_2: [back](#contents)
 
 
