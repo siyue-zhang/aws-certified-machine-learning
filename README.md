@@ -783,7 +783,32 @@ Probabilistic Forecasting with Autoregressive Recurrent Networks
 
 The DeepAR Forecasting algo works great when you are trying to forecast using much similar time series across a set of cross-sectional units. The collective time series of other products' sales will help predict sales for the new product.
 
+### 4. Fraud Detector Service
 
+ONLINE_FRAUD_INSIGHTS model
+
+### 5. CNN-QR
+
+Amazon CNN-QR is the only forecast algorithm that accepts related time series data without future values.
+
+Amazon Forecast CNN-QR, Convolutional Neural Network - Quantile Regression, is a proprietary machine learning algorithm for forecasting scalar (one-dimensional) time series using causal convolutional neural networks (CNNs). This supervised learning algorithm trains one global model from a large collection of time series and uses a quantile decoder to make probabilistic predictions.
+
+### 6. Lasso
+
+Lasso regularization (L1) handles outliers well, better than Ridge (L2). Lasso combats overfitting by shrinking the parameters towards 0. This makes some features obsolete. 
+
+Ridge (in regression problems), combats overfitting by forcing weights to be small, but not making them exactly 0. A major snag to consider when using L2 regularization is that it’s not robust to outliers. The squared terms will blow up the differences in the error of the outliers. The regularization would then attempt to fix this by penalizing the weights. 
+
+<p align=center>
+<image src=https://miro.medium.com/max/2000/1*zMLv7EHYtjfr94JOBzjqTA.png width=400/>
+<p/>
+
+#### Key Differences
+
+* L1 regularization penalizes the sum of absolute values of the weights, whereas L2 regularization penalizes the sum of squares of the weights. 
+* The L1 regularization solution is sparse. The L2 regularization solution is non-sparse.
+* L2 regularization doesn’t perform feature selection, since weights are only reduced to values near 0 instead of 0. L1 regularization has built-in feature selection.
+* L1 regularization is robust to outliers, L2 regularization is not. 
 
 :point_up_2: [back](#contents)
 
