@@ -777,6 +777,14 @@ With a multinomial event model, samples (feature vectors) represent the frequenc
 
 Document classification tasks where you wish to know the **frequency** of a given word from your vocabulary.
 
+### 3. DeepAR
+
+Probabilistic Forecasting with Autoregressive Recurrent Networks
+
+The DeepAR Forecasting algo works great when you are trying to forecast using much similar time series across a set of cross-sectional units. The collective time series of other products' sales will help predict sales for the new product.
+
+
+
 :point_up_2: [back](#contents)
 
 
