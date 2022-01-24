@@ -860,8 +860,23 @@ SageMaker Neo is designed for compiling models using TensorFlow and other framew
 
 Rekognition (which doesn't have an "edge mode," but does integrate with DeepLens) can't handle the very specific classification task of identifying different street signs and what they mean.
 
-### 12. 
+### 12. AWS Kendra
 
+The limit for the total size of your files from S3 bucket is 50 MB.
+
+Amazon Kendra is an intelligent search service powered by machine learning (ML). 
+
+Kendra documents has limit that text extracted from an individual document can not exceed 5 MB.
+
+Kendra supports following unstructured document types: HTML, PPT, Word, plain text, PDFs.
+
+### 13. SageMaker Processing
+
+AWS managed service that you can use to run data engineering workloads in SageMaker using simple SageMaker Processing APIs. This managed service removes much of the infrastructure and coding work need to perform data engineering tasks.
+
+### 14. SageMaker Data Wrangler
+
+The two metrics used by the SageMaker Data Wrangler target leakage analysis visualization are **AOC-ROC and R2**.
 
 :point_up_2: [back](#contents)
 
