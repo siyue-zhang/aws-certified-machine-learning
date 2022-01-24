@@ -846,7 +846,21 @@ Reserved instance > more expensive > Spot instance
 
 The SageMakerEstimator classes allow tight integration between Spark and SageMaker for several models including XGBoost, and offers the simplest solution. 
 
-XGBoost actually requires LibSVM or CSV input, not RecordIO.
+XGBoost actually requires LibSVM or CSV input, not RecordIO. RecordIO is for image and video.
+
+### 10. Precision and Recall
+
+Precision = True positive / Predicted positive
+
+Recall = True positive / All positive
+
+### 11. SageMaker Neo
+
+SageMaker Neo is designed for compiling models using TensorFlow and other frameworks to edge devices such as Nvidia Jetson, and run it on the edge with IoT GreenGrass. The low latency requirement requires an edge solution, where the classification is being done within the vehicle itself and not over the air. 
+
+Rekognition (which doesn't have an "edge mode," but does integrate with DeepLens) can't handle the very specific classification task of identifying different street signs and what they mean.
+
+### 12. 
 
 
 :point_up_2: [back](#contents)
