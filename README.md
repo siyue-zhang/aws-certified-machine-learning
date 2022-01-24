@@ -35,6 +35,7 @@ This credential helps organizations identify and develop talent with critical sk
   * Reinforcement Learning Algorithms
   * Forecasting Algorithms
 * [Implementation and Operations](#implementation-and-operations)
+* [Practice Questions](#practice-questions)
 
 ## Machine Learning Life Cycle
 
@@ -730,6 +731,28 @@ RL in TensorFlow and Apache MXNet
 
 :point_up_2: [back](#contents)
 
+## Practice Questions
 
+### 1. Correlation
+
+**Correlation** is a bivariate analysis that measures the strength of association between two variables and the direction of the relationship. 
+
+*Pearson Correlation Coefficient* - Gaussian relationship between variables (normal distribution)
+
+<p align=center>
+<image src=https://wikimedia.org/api/rest_v1/media/math/render/svg/2b9c2079a3ffc1aacd36201ea0a3fb2460dc226f width=400/>
+<p/>
+
+*Spearman's Rank Correlation Coefficient* - non-Gaussian relationship between variables 
+
+<p align=center>
+<image src=https://www.statisticshowto.com/wp-content/uploads/2015/01/tied-ranks-1.png width=400/>
+<p/>
+
+*Polychoric Correlation* is used to understand the relationship of variables gathered via surveys such as personality tests and surveys that use rating scales.
+
+### 2. 
+
+:point_up_2: [back](#contents)
 
 
