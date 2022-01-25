@@ -876,7 +876,17 @@ AWS managed service that you can use to run data engineering workloads in SageMa
 
 ### 14. SageMaker Data Wrangler
 
+Amazon SageMaker Data Wrangler includes built-in analyses that help you generate visualizations and data analyses in a few clicks. You can also create custom analyses using your own code.
+
+**Target leakage** occurs when there is data in a machine learning training dataset that is strongly correlated with the target label, but is not available in real-world data. For example, you may have a column in your dataset that serves as a proxy for the column you want to predict with your model.
+
 The two metrics used by the SageMaker Data Wrangler target leakage analysis visualization are **AOC-ROC and R2**.
+
+* For classification, the Target Leakage analysis uses the area under the receiver operating characteristic, or AUC - ROC curve for each column, up to Max features. 
+  *  A score of 1 indicates perfect predictive abilities, which often indicates target leakage.
+  *  A score of 0.5 or lower indicates that the information on the column could not provide, on its own, any useful information towards predicting the target.
+  *  Although it can happen that a column is uninformative on its own but is useful in predicting the target when used in tandem with other features, a low score could indicate the feature is redundant.  
+* For regression, it uses a coefficient of determination, or R2 metric.
 
 ### 15. Label Encoding and Target Encoding
 
