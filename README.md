@@ -890,9 +890,43 @@ The two metrics used by the SageMaker Data Wrangler target leakage analysis visu
 
 ### 15. Label Encoding and Target Encoding
 
+**Label Encoding**
+
+* Convert categorical label into numerical value, 
+* Assign 0, 1, 2, ... -> alphabetical order
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+le.fit(y_train)
+le.classes_
+le.transform(y_test)
+```
+
+**Ordinal Encoding**
+
+Categorical value scale has meanings (e.g. Education: primary school, middle school, high school...)
+
+**Target Encoding**
+
+Replace the feature with the mean value of the target variable of all the rows (e.g. salary estimation problem, replace city name by the mean salary of the city)
+
+CHALLENGES: Overfitting! Data Leakage!
+
+Solutions:
+* Take mean of target variable leaving the current observation (mean salary except the particular salary in the row)
+* Take the mean of target variable from all other folds during K-fold cross validation
+* Add Gaussian noise to the column after target encoding
+* Smoothing with global target mean: combination of salt lake city salary and global average salary
+
+* When you have many categories, good to use target encoding over one-hot encoding
+* Target encoding cannot capture **dependencies** between different categorical features
+
 ### 16. Linear Discriminant Analysis (LDA)
 
 Used to reduce dimensionality in multi-class classification problems that predict a categorical target.
+
 
 
 :point_up_2: [back](#contents)
