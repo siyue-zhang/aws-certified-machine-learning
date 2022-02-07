@@ -1,5 +1,10 @@
 
-## Rekognition Image Service 
+## Amazon Image Rekognition Service
+
+<p align=center>
+<img src=./rk.png width=600>
+<p\>
+
 ```python
 import json
 import boto3
