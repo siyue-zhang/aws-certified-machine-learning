@@ -36,6 +36,7 @@ This credential helps organizations identify and develop talent with critical sk
   * Forecasting Algorithms
 * [Implementation and Operations](#implementation-and-operations)
 * [Practice Questions](#practice-questions)
+* [Lab Codes](./codes.md)
 
 ## Machine Learning Life Cycle
 
