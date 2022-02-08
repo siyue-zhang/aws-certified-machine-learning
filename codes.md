@@ -47,3 +47,56 @@ Case Study
 5. The consumers can do many things with the data.
 6. Suppose the consumer can read the data and send an email to the clients with the information or the data can be published into social media platforms or the data can be saved into the database.
 
+Lambda: producer
+```javascript
+const AWS = require('aws-sdk');
+AWS.config.update({
+    region: 'us-east-1'
+})
+const s3 = new AWS.S3();
+const kinesis = new AWS.Kinesis();
+
+exports.handler = async (event) => {
+    console.log(JSON.stringify(event));
+    const bucketName = event.Records[0].s3.bucket.name;
+    const keyName = event.Records[0].s3.object.key;
+    const params = {
+        Bucket: bucketName,
+        Key: keyName
+    }
+    await s3.getObject(params).promise().then(async (data) => {
+        const dataString = data.Body.toString();
+        const payload = {
+            data: dataString
+        }
+        await sendToKinesis(payload, keyName);
+    }, error => {
+        console.error(error);
+    })
+};
+
+async function sendToKinesis(payload, partitionKey) {
+    const params = {
+        Data: JSON.stringify(payload),
+        PartitionKey: partitionKey,
+        StreamName: 'whiz-data-stream'
+    }
+
+    await kinesis.putRecord(params).promise().then(response => {
+        console.log(response);
+    }, error => {
+        console.error(error);
+    })
+}
+```
+
+Lambda: consumer
+```javascript
+exports.handler = async (event) => {
+    console.log(JSON.stringify(event));
+    for (const record of event.Records) {
+        const data = JSON.parse(Buffer.from(record.kinesis.data, 'base64'));
+        console.log('consumer #1', data);
+    }
+};
+```
