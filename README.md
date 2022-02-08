@@ -928,7 +928,22 @@ Solutions:
 
 Used to reduce dimensionality in multi-class classification problems that predict a categorical target.
 
+### 17. AutoPilot Service
 
+With SageMaker Autopilot, you simply provide a tabular dataset and select the target column to predict, which can be a number (such as a house price, called regression), or a category (such as spam/not spam, called classification). SageMaker Autopilot will automatically explore different solutions to find the best model. You then can directly deploy the model to production with just one click, or iterate on the recommended solutions with Amazon SageMaker Studio to further improve the model quality.
+
+* Built upon the SageMaker Service
+* No limit to the size of source data
+* Only support tabular data sets in CSV (not libsvm)
+* Support either all files have a header row or the first file of the dataset when sorted in alphabetical/lexical order
+
+### 18. VPC Peering
+
+Used for client account peering, not for communication with an Amazon managed service.
+
+A VPC peering connection helps you to facilitate the transfer of data. For example, if you have more than one AWS account, you can peer the VPCs across those accounts to create a file sharing network. You can also use a VPC peering connection to allow other VPCs to access resources you have in one of your VPCs.
+
+An interface VPC endpoint (interface endpoint) allows you to connect to services powered by AWS PrivateLink. Using a VPC interface endpoint allows traffic to flow entirely and securely within the AWS network.
 
 :point_up_2: [back](#contents)
 
