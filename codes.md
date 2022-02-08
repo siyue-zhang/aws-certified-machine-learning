@@ -1,9 +1,9 @@
 
-## Amazon Image Rekognition Service
+## Image Object Detection with Amazon Rekognition
 
 <p align=center>
 <img src=./rk.png width=600>
-<p\>
+</p>
 
 ```python
 import json
@@ -32,3 +32,18 @@ def lambda_handler(event, context):
     except Exception as e:
         print("Client connection to Rekognition failed because ", e)
 ```
+
+## Real Time Data Streaming System
+
+<p align=center>
+<img src=./kinesis.png width=600>
+</p>
+
+Case Study
+1. We have an application which uploads text files to S3 Bucket.
+2. Whenever a file is uploaded to the S3 Bucket, it’s going to trigger a lambda function.
+3. The lambda function is a data producer, which reads the content from the S3 Bucket and then pushes the data to the Kinesis data stream.
+4. We have two consumers which consume the data from the stream.
+5. The consumers can do many things with the data.
+6. Suppose the consumer can read the data and send an email to the clients with the information or the data can be published into social media platforms or the data can be saved into the database.
+
